@@ -1,0 +1,52 @@
+\begin{frame}{Shared Evaluation Task Overview}
+\begin{itemize}
+\item Goal: Evaluate automatic MT evaluation metrics
+\item Compare metrics against human judgments
+\item Builds on previous Metrics-MATR evaluation (NIST)
+\end{itemize}
+\begin{table}[ht]
+\centering
+\caption{Automatic Metrics Evaluated by Type}
+\label{tab:automatic_metrics}
+\begin{tabular}{ll}
+\toprule
+\textbf{Metric Type} & \textbf{Specific Metrics Evaluated} \\
+\midrule
+N-gram based & BLEU, METEOR \\
+Edit-distance & TER, TERp \\
+Similarity-based & MaxSim \\
+Semantic & RTE, SemPOS \\
+Combined & ULC \\
+POS-based & wpF, wpBLEU \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{System-Level Correlation}
+\begin{itemize}
+\item Compare metric rankings with human rankings
+\item Use Spearman rank correlation ($\rho$)
+    \vspace{-0.5em}
+        \begin{equation*}
+            \rho = 1 - \frac{6 \sum d_{i}^2}{n (n^2 - 1)}
+        \end{equation*}
+    \vspace{-0.5em}
+\begin{tabular}{lll}
+    where, &&\\
+    & $d_i$ & Difference between the rank for system $i$ \\
+    & $n$ & Number of systems \\
+\end{tabular}
+\item Convert system scores into ranks
+\item Measure similarity with human judgments
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Sentence-Level Consistency}
+\begin{itemize}
+\item Compare metrics at sentence level
+\item Use pairwise system comparisons
+\item Check agreement with human judgments
+\item Report percentage of consistent decisions
+\end{itemize}
+\end{frame}

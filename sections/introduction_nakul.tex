@@ -1,0 +1,137 @@
+\begin{frame}{}
+    \begin{columns}
+        \column{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/katz.jpg}
+        \column{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{figures/pevear_and_volokhonsky.jpg}
+    \end{columns}
+\end{frame}
+\begin{frame}{}
+    \begin{columns}
+        \column{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,clip,trim={0 0 0 40em}]{figures/katz.jpg}
+        \column{0.45\textwidth}
+        \centering
+        \includegraphics[width=\textwidth,clip,trim={0 5em 0 38em}]{figures/pevear_and_volokhonsky.jpg}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{WMT 2009 Overview}
+
+\begin{overlayarea}{\textwidth}{2cm}
+    \begin{itemize}
+        \item Fourth Workshop on Statistical Machine Translation
+        \item Shared task evaluation of machine translation systems
+    \end{itemize}
+\end{overlayarea}
+
+\begin{block}{Goals of the Workshop}
+    \begin{itemize}
+        \item Evaluate state-of-the-art machine translation
+        \item Provide shared datasets and benchmarks
+        \item Compare systems under common conditions
+        \item Improve evaluation methodologies
+    \end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}{WMT 2009 Overview}
+
+\begin{overlayarea}{\textwidth}{2cm}
+\begin{table}
+    \centering
+    \begin{tabular}{c c c}
+        \Huge \faLanguage & \Huge \faRandom & \Huge \faTimesCircle \\
+        Translation task & System combination task & Evaluation task \\
+    \end{tabular}
+\end{table}
+\end{overlayarea}
+
+\begin{block}{Goals of the Workshop}
+    \begin{itemize}
+        \item Evaluate state-of-the-art machine translation
+        \item Provide shared datasets and benchmarks
+        \item Compare systems under common conditions
+        \item Improve evaluation methodologies
+    \end{itemize}
+\end{block}
+
+\end{frame}
+
+\begin{frame}{\faLanguage\ Translation Task}
+    \begin{itemize}
+        \item News domain translation
+        \item English and five European languages
+    \end{itemize}
+
+    \vfill
+
+    \begin{tabularx}{\textwidth}{XX}
+        \toprule
+        \textbf{Training Data} & \textbf{Testing Data} \\
+        \midrule
+        Automated web crawler data, and existing datasets
+        & Manually translated news articles. \\
+        \bottomrule
+    \end{tabularx}
+    
+    \vfill
+
+    \begin{block}{Datasets Used}
+        \begin{columns}
+            \column{0.45\textwidth}
+
+            \textbf{Translation Datasets}
+        \begin{itemize}
+                \small
+            \item Europarl Translation Corpus
+            \item News Commentary Translation Corpus
+            \item \( 10^9 \) Word Parallel Corpus
+        \end{itemize}
+
+            \column{0.45\textwidth}
+
+
+            \textbf{Language Datasets}
+            \begin{itemize}
+                \item Europarl Language Model Corpus
+                \item News Language Model Corpus
+            \end{itemize}
+        \end{columns}
+    \end{block}
+
+\end{frame}
+
+\begin{frame}{\faRandom\ System Combination Task}
+\begin{itemize}
+    \item Participants were allowed to use \textbf{Moses}, an open-source
+        translation toolkit.
+    \item Moses performed at par with the best submissions of the previous year.
+    \item 22 groups from 20 institutions submitted; 12 groups used the Moses toolkit.
+    \item 87 systems were submitted, and an additional 42 were submitted as secondary systems. 6 combination systems were also submitted.
+\end{itemize}
+
+    \begin{block}{System Combination}
+    \begin{itemize}
+        \item Na\"ive Combination
+        \item Multi-source combination
+    \end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{\faTimesCircle\ Evaluation Task}
+    \begin{itemize}
+        \item Outputs from select systems were evaluated by human annotators.
+            These were split into two types:
+            \begin{enumerate}
+                \item Ranked lists
+                \item Edited translations
+            \end{enumerate}
+        \item Automated metrics also scored the translations.
+        \item Both scores were compared to find the best automated metrics.
+    \end{itemize}
+\end{frame}

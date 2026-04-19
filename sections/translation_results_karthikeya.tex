@@ -1,0 +1,100 @@
+\begin{frame}{Translation Task Results}
+In this section, we will try to answer these three questions:
+
+\begin{itemize}
+    \item Which systems produced the best translation quality for each language pair?
+    \item Did the system combinations produce better translations than individual systems?
+    \item Which of the systems that used only the provided training materials produced the best translation quality?
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Which MT systems are best?}
+\textbf{How “Best” is Defined?}
+\begin{itemize}
+    \item Based on human evaluation (sentence ranking)
+    \item Systems ranked by:
+    \item How often their translations are better than or equal to others
+    \item They used Sign Test (p ≤ 0.1)
+\end{itemize}
+
+\vspace{0.5em}
+
+\begin{table}
+\centering
+    \begin{tabularx}{\textwidth}{lXXX}
+\toprule
+Pair & Performance Range & Top systems (C) & Top systems (NC) \\
+\midrule
+French $\rightarrow$ English & 0.76 - 0.34 & DCU, JHU & Google, LIMSI \\
+English $\rightarrow$ French & 0.73 - 0.38 & UKA, DCU & LIUM-SYSTRAN, Google \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\end{frame}
+
+\begin{frame}{Which MT systems are best?}
+\begin{table}
+\centering
+    \begin{tabularx}{\textwidth}{lXXX}
+\toprule
+Pair & Performance Range & Top systems (C) & Top systems (NC) \\
+\midrule
+German $\rightarrow$ English & 0.66 - 0.33 & STUTTGART, UEDIN & RBMT5, USAAR \\
+English $\rightarrow$ German & 0.66 - 0.43 & UKA, UEDIN & RBMT2, RBMT3 \\
+Czech $\rightarrow$ English & 0.75 - 0.51 & UEDIN, CU-BOJAR & Google \\
+Hungarian $\rightarrow$ English & 0.75 - 0.45 & UMD, UEDIN & MORPHO \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\end{frame}
+
+\begin{frame}{Which MT systems are best?}
+\begin{table}
+\centering
+    \begin{tabularx}{\textwidth}{lXXX}
+\toprule
+Pair & Performance Range & Top systems (C) & Top systems (NC) \\
+\midrule
+Spanish $\rightarrow$ English & 0.70 - 0.37 & TALP-UPC, WEDIN & Google, RBMT1 \\
+English $\rightarrow$ Spanish & 0.66 - 0.48 & UEDIN, NUS & RBMT3, Google \\
+English $\rightarrow$ Czech & 0.67 - 0.48 & CU-BOJAR, WEDIN & PCTRANS, EUROTRANXP \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\end{frame}
+
+\begin{frame}{Are system combinations better than single systems?}
+\begin{block}{Understandability}
+\begin{itemize}
+    \item Measures how often translated output is clear and meaningful after editing
+    \item Based on human judgment (Yes/No) on edited translations
+    \item Reflects real-world usability of translations
+\end{itemize}
+\end{block}
+
+\vfill
+\textbf{Results:}
+\begin{itemize}
+    \item ~50\% acceptable translations (French - English, German - English, English - Spanish)
+    \item ~40\% acceptable translations (Spanish - English)
+    \item ~30\% acceptable translations (English - Czech)
+    \item ~20\% acceptable translations (Czech - English, Hungarian - English)
+\end{itemize}
+
+\vfill
+\begin{itemize}
+    \item Even top systems are only correct ~half the time
+    \item Large variation across language pairs
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Takeaways}
+\begin{itemize}
+    \item Human evaluation is the gold standard
+    \item Commercial systems (Google, RBMT) perform strongly
+    \item Performance drops for complex/hard language pairs
+    \item Many systems perform similarly $\rightarrow$ hard to declare a clear winner
+    \item System combinations doesn’t guarantee improvement
+    \item Machine Translation quality is still far from perfect
+\end{itemize}
+\end{frame}

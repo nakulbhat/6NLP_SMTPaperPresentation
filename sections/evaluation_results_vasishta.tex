@@ -1,0 +1,127 @@
+\begin{frame}{System-Level Correlation}
+
+\begin{block}{Method}
+Spearman's rank correlation (\( \rho  \)). \\
+    \( \rho  \) = 1 means perfect match with humans.\\
+    \( \rho  \) = -1 means perfect reverse match with humans.
+\end{block}
+
+\vfill
+
+\begin{block}{Results}
+    \begin{columns}
+        \column{0.45\textwidth}
+        \begin{itemize}
+            \item For non-English targets: metrics relying on English tools (WordNet, POS taggers) fail. TERp and wpBleu are best there.
+            \item English-German: nearly all metrics had negative correlation.
+        \end{itemize}
+        \column{0.45\textwidth}
+\begin{table}
+\centering
+\begin{tabular}{l c}
+\toprule
+Metric & Avg rho \\
+\midrule
+ULC & 0.83 \\
+MaxSim & 0.80 \\
+RTE (absolute) & 0.79 \\
+Meteor-rank & 0.75 \\
+BLEU & 0.47 \\
+TER / TERp & negative \\
+\bottomrule
+\end{tabular}
+\end{table}
+\end{columns}
+\end{block}
+
+
+\end{frame}
+
+
+
+\begin{frame}{Sentence-Level Consistency}
+
+\begin{block}{Method}
+for every pair of systems on one sentence, did the metric agree with the human? Random baseline = 50\%.
+\end{block}
+
+\vfill
+
+Most metrics barely beat -- or fall below -- 50\%.
+
+\vfill
+
+\begin{columns}
+
+\column{0.48\textwidth}
+\textbf{Into English best}
+
+\column{0.48\textwidth}
+\textbf{Out of English best}
+\end{columns}
+\begin{columns}
+\column{0.48\textwidth}
+\begin{table}
+\centering
+\begin{tabular}{l c}
+\toprule
+Metric & Score \\
+\midrule
+ULC & 0.54 \\
+RTE & 0.53 \\
+wpF & 0.52 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\column{0.48\textwidth}
+\begin{table}
+\centering
+\begin{tabular}{l c}
+\toprule
+Metric & Score \\
+\midrule
+wpF & 0.51 \\
+wcd6p4er & 0.50 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{columns}
+
+\vfill
+
+\begin{itemize}
+    \item TER / TERp: fell BELOW 50\% -- worse than random.
+\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}{Sentence-Level Consistency (Tables 10-11)}
+
+\begin{block}{The ``prior'' trick}
+using a metric's system-level score as a fixed prior for every sentence it produces jumps consistency to 0.57-0.61, near Oracle (0.62).
+\end{block}
+
+\vfill
+
+\begin{block}{Insight}
+which system produced the sentence predicts quality better than analyzing the sentence itself.
+\end{block}
+
+\end{frame}
+
+
+
+\begin{frame}{Key Takeaways}
+
+\begin{itemize}
+    \item ULC best predicts human judgment at system level. BLEU is overused and underperforms.
+    \item For non-English targets, TERp and wpBleu hold up; most others break down.
+    \item Sentence-level evaluation is extremely hard -- most metrics are near coin-flip.
+    \item Using system-level performance as a prior significantly improves sentence-level consistency -- a clear direction for future work.
+\end{itemize}
+
+\end{frame}
