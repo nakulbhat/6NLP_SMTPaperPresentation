@@ -1,13 +1,18 @@
 % arara: lualatex: {shell: yes}
 % arara: lualatex: {shell: yes}
 
-\documentclass{BetterPresentation}
+\documentclass[aspectratio=1610]{BetterPresentation}
 
 \usepackage{graphicx}
 \usepackage{fontspec, fontawesome}
 \usepackage{tabularx}
 \usepackage[table]{xcolor}
 \usepackage{booktabs}
+\usepackage{array}
+\usepackage{ragged2e}
+\newcolumntype{P}[1]{>{\RaggedRight\hspace{0pt}}p{#1}}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
 
 \title[WSMT 2009]{Findings of the 2009 Workshop on Statistical Machine Translation}
 \subtitle{Summary of the paper by Callison-Burch, et al. (2009)}
@@ -19,7 +24,7 @@
             Nakul Bhat\\230962212
             \column{.32\linewidth}
             \centering
-            Ashwin Nair\\230962354
+            Ashwin Nair\\230962254
             \column{.32\linewidth}
             \centering
             Davasam Karthikeya\\230962326

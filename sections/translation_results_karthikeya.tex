@@ -14,14 +14,14 @@ In this section, we will try to answer these three questions:
     \item Based on human evaluation (sentence ranking)
     \item Systems ranked by:
     \item How often their translations are better than or equal to others
-    \item They used Sign Test (p ≤ 0.1)
+    \item They used Sign Test (p \( \leq \) 0.1)
 \end{itemize}
 
 \vspace{0.5em}
 
 \begin{table}
 \centering
-    \begin{tabularx}{\textwidth}{lXXX}
+    \begin{tabularx}{\textwidth}{lLLL}
 \toprule
 Pair & Performance Range & Top systems (C) & Top systems (NC) \\
 \midrule
@@ -35,7 +35,7 @@ English $\rightarrow$ French & 0.73 - 0.38 & UKA, DCU & LIUM-SYSTRAN, Google \\
 \begin{frame}{Which MT systems are best?}
 \begin{table}
 \centering
-    \begin{tabularx}{\textwidth}{lXXX}
+    \begin{tabularx}{\textwidth}{lLLL}
 \toprule
 Pair & Performance Range & Top systems (C) & Top systems (NC) \\
 \midrule
@@ -51,7 +51,7 @@ Hungarian $\rightarrow$ English & 0.75 - 0.45 & UMD, UEDIN & MORPHO \\
 \begin{frame}{Which MT systems are best?}
 \begin{table}
 \centering
-    \begin{tabularx}{\textwidth}{lXXX}
+    \begin{tabularx}{\textwidth}{lLLL}
 \toprule
 Pair & Performance Range & Top systems (C) & Top systems (NC) \\
 \midrule
@@ -60,6 +60,65 @@ English $\rightarrow$ Spanish & 0.66 - 0.48 & UEDIN, NUS & RBMT3, Google \\
 English $\rightarrow$ Czech & 0.67 - 0.48 & CU-BOJAR, WEDIN & PCTRANS, EUROTRANXP \\
 \bottomrule
 \end{tabularx}
+\end{table}
+\end{frame}
+
+\begin{frame}{System Combinations vs Individual Systems}
+    \footnotesize
+    \begin{table}[htbp]
+\centering
+        \begin{tabular}{l P{1.7in} c P{2in}}
+\toprule
+\textbf{Language Pair} & \textbf{Best system combinations} & \textbf{Entries} & \textbf{Significantly different than best individual systems?} \\
+\midrule
+
+German-English 
+& RWTH-COMBO, BBN-COMBO, CMU-COMBO, USAAR-COMBO 
+& 5 
+& BBN-COMBO $>$ GOOGLE, SYSTRAN; USAAR-COMBO $<$ RMBT2; no difference for others \\
+
+English-German 
+& USAAR-COMBO 
+& 1 
+& worse than 3 best systems \\
+
+Spanish-English 
+& CMU-COMBO, USAAR-COMBO, BBN-COMBO 
+& 3 
+& each better than one of the RBMT systems, but there was no difference with GOOGLE, TALP-UPC \\
+
+English-Spanish 
+& USAAR-COMBO 
+& 1 
+& no difference \\
+
+French-English 
+& CMU-COMBO-HYPOSEL, DCU-COMBO, CMU-COMBO 
+& 5 
+& no difference \\
+
+English-French 
+& USAAR-COMBO, DCU-COMBO 
+& 2 
+& USAAR-COMBO $>$ UKA; DCU-COMBO $>$ SYSTRAN, LIMSI; no difference with others \\
+
+Czech-English 
+& CMU-COMBO 
+& 2 
+& no difference \\
+
+Hungarian-English 
+& CMU-COMBO-HYPOSEL, CMU-COMBO 
+& 3 
+& both worse than MORPHO \\
+
+Multisource-English 
+& RWTH-COMBO 
+& 3
+& N/A \\
+
+\bottomrule
+\end{tabular}
 \end{table}
 \end{frame}
 
